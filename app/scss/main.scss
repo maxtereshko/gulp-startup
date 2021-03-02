@@ -2,11 +2,51 @@
 
 // silence is gold.
 
-.preview {
-  max-width: 640px;
-  margin: 40px auto 100px;
+.container {
+  margin: 0 auto;
+  max-width: $width;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
 
-  img {
-    width: 100%;
+/* 1. header */
+
+.header {
+  border-bottom: 1px solid var(--border);
+
+  &__grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+    padding: 0.75rem 0;
+
+    &--left {
+      justify-self: start;
+      align-self: center;
+
+      .logo {
+        background-color: red;
+
+        img {
+          display: block;
+        }
+      }
+    }
+    &--right {
+      justify-self: end;
+      align-self: center;
+    }
   }
+}
+
+/* 3. main */
+
+.main {
+  // code...
+}
+
+/* 3. footer */
+
+footer.footer {
+  border-top: 1px solid var(--border);
 }

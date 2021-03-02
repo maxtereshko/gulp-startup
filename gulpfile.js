@@ -4,7 +4,7 @@ let preprocessor = "scss",
   fileswatch = "html,htm,txt,json,md,woff2",
   imageswatch = "jpg,jpeg,png,webp,svg",
   baseDir = "app",
-  online = false
+  online = true
 
 let paths = {
   scripts: {

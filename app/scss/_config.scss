@@ -1,11 +1,19 @@
 // vars
 
 $montserrat: "Montserrat", sans-serif;
-$text: #222;
+$width: 1200px;
 
 // css imports
 
 @import "../../node_modules/normalize.css/normalize.css";
+
+// color scheme
+
+:root {
+  --textcolor: #222;
+  --bodybg: rgb(252, 252, 255);
+  --border: #dce1e6;
+}
 
 // general
 
@@ -15,5 +23,38 @@ body {
   position: relative;
   line-height: 1.55;
   overflow-x: hidden;
-  color: $text;
+  display: flex;
+  flex-direction: column;
+
+  /* colors */
+  color: var(--text);
+  background-color: var(--bodybg);
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+/**
+sticky footer
+*/
+
+/* mobile viewport bug fix */
+html {
+  height: -webkit-fill-available;
+}
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+header.header,
+footer.footer {
+  flex-shrink: 0;
+}
+
+main.main {
+  flex: 1 0 auto;
 }
