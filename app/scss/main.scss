@@ -1,0 +1,12 @@
+@import "config";
+
+// silence is gold.
+
+.preview {
+  max-width: 640px;
+  margin: 40px auto 100px;
+
+  img {
+    width: 100%;
+  }
+}

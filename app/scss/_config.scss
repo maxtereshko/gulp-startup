@@ -1,0 +1,19 @@
+// vars
+
+$montserrat: "Montserrat", sans-serif;
+$text: #222;
+
+// css imports
+
+@import "../../node_modules/normalize.css/normalize.css";
+
+// general
+
+body {
+  font-family: $montserrat;
+  font-size: 16px;
+  position: relative;
+  line-height: 1.55;
+  overflow-x: hidden;
+  color: $text;
+}
