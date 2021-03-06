@@ -1,6 +1,7 @@
 // vars
 
 $montserrat: "Montserrat", sans-serif;
+// $montserrat: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 $width: 1200px;
 
 // css imports
@@ -19,22 +20,12 @@ $width: 1200px;
 
 body {
   font-family: $montserrat;
-  font-size: 16px;
+  font-size: 15px;
   position: relative;
   line-height: 1.55;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-
-  /* colors */
-  color: var(--text);
-  background-color: var(--bodybg);
-}
-
-@media (max-width: 600px) {
-  body {
-    font-size: 15px;
-  }
 }
 
 /**
@@ -57,4 +48,26 @@ footer.footer {
 
 main.main {
   flex: 1 0 auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 652px) {
+  main.main {
+    margin-top: 2.25rem;
+    margin-bottom: 2.25rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  main.main {
+    margin-top: 4.5rem;
+    margin-bottom: 4.5rem;
+  }
+}
+
+.main-centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

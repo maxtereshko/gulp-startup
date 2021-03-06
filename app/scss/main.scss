@@ -1,52 +1,101 @@
 @import "config";
 
-// silence is gold.
+// TEMP!!!!!
 
-.container {
-  margin: 0 auto;
-  max-width: $width;
-  padding-left: 1rem !important;
-  padding-right: 1rem !important;
+header.header {
+  background-color: lightblue;
 }
 
-/* 1. header */
+main.main {
+  background-color: plum;
+}
 
-.header {
-  border-bottom: 1px solid var(--border);
+footer.footer {
+  background-color: lightgoldenrodyellow;
+}
 
-  &__grid {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 1rem;
-    padding: 0.75rem 0;
+.container,
+.container-lg {
+  background-color: rgba(0, 0, 0, 0.15);
+}
 
-    &--left {
-      justify-self: start;
-      align-self: center;
+// silence is gold
 
-      .logo {
-        background-color: red;
+main.main,
+footer.footer,
+header.header {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 
-        img {
-          display: block;
-        }
-      }
-    }
-    &--right {
-      justify-self: end;
-      align-self: center;
+.container {
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+
+  &-lg {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    &-lg {
+      max-width: 620px;
     }
   }
 }
 
-/* 3. main */
+// header
 
-.main {
-  // code...
+.header {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  &__inner {
+    height: 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
-/* 3. footer */
+// footer
 
-footer.footer {
-  border-top: 1px solid var(--border);
+.footer {
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+  &__inner {
+    &--top {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr;
+    }
+
+    &--bottom {
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 540px) {
+  .footer {
+    &__inner {
+      &--top {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .footer {
+    &__inner {
+      &--top {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
 }
