@@ -151,7 +151,7 @@ header.header {
     padding: 0;
     border-radius: 3px;
     overflow: hidden;
-    margin-top: 0.75rem;
+    margin-top: 1.5rem;
 
     img {
       width: 100%;
@@ -160,7 +160,7 @@ header.header {
   }
 
   &__footer {
-    margin-top: 0.75rem;
+    margin-top: 1.5rem;
     font-size: 14px;
     color: var(--light);
     display: flex;
