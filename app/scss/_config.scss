@@ -11,9 +11,11 @@ $width: 1200px;
 // color scheme
 
 :root {
-  --textcolor: #222;
-  --bodybg: rgb(252, 252, 255);
-  --border: #dce1e6;
+  --text: rgb(26, 35, 45);
+  --light: rgb(69, 83, 99);
+  --body: rgb(252, 252, 255);
+  --border: #e5eaf0;
+  --accent: #b89a6c;
 }
 
 // general
@@ -26,6 +28,8 @@ body {
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
+  background-color: var(--body);
+  color: var(--text);
 }
 
 /**
